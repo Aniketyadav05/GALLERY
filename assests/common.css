@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import './colors.css';
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+.container {
+    position: relative;
+    z-index: 2;
+    transition: filter 0.3s ease;
+}
+
+
+.blur {
+    filter: blur(5px);
+    
+    transition: filter 0.3s ease;
+  
+}
+
+body {
+    background-color: var(--bb);
+    min-height: calc(100vh - 5rem);
+    position: relative;
+    padding-bottom: 5rem;
+    display: inline-block;
+    width: 100%;
+
+}
+
+nav {
+    background-color: var(--greenish);
+
+}
+
+nav .logo {
+    height: 1.75rem;
+    margin-left: 0.75rem;
+    ;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+
+nav .logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+
+nav .title {
+    padding: 0.75rem;
+    padding-left: 0px;
+    color: var(--white);
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease-in-out;
+}
+
+nav .title:hover {
+    color: aqua;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1) rotate(-2deg);
+}
+
+nav form {
+    display: inline;
+    float: right;
+    padding-top: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+nav .search {
+    font-family: 'Press Start 2P', cursive;
+    padding: 0.25rem 0.75rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+nav .search:focus {
+    outline: none;
+    border: 1px solid var(--white);
+    border-color: aqua;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    margin: 1.75rem;
+    animation: blinkColor 1.5s infinite;
+}
+
+@keyframes blinkColor {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: aqua;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: var(--greenish);
+    width: calc(100% - 1.5rem);
+    padding: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    transition: text-shadow 0.3s ease, transform 0.3s ease-in-out;
+
+}
+
+footer h5 {
+    color: white;
+    animation: blinkColor 1.5s infinite;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer a:hover {
+    text-shadow: 2px 2px 4px rgba(4, 149, 246, 0.3);
+    transform: scale(1.25);
+}
+
+@media screen and (max-width: 830px) {
+    footer h1 {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+
+    body {
+        min-height: calc(100vw - 10rem);
+        padding-bottom: 10rem;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    nav {
+        display: inline-block;
+        width: 100%;
+    }
+
+    nav form {
+        float: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        gap: 1.75rem;
+
+    }
+
+}
+
+.heading {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading i {
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+    font-size: 1.5rem;
+}

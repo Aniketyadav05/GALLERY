@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | A Photo Search App</title>
+    <link rel="stylesheet" href="./assests/common.css">
+    <link rel="stylesheet" href="./assests/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./"><img src="./assests/logo.png" alt="Logo" class="logo"></a>
+        <a href="./">
+            <h1 class="title">Gallery</h1>
+        </a>
+        <form action="./search.html" method="get">
+            <input type="text" name="Q" autocomplete="off" class="search" placeholder="Type Anything" />
+            <input type="submit" value="SEARCH" class="search">
+        </form>
+
+    </nav>
+    <section>
+        <h1 class="heading"><i class="fa-solid fa-magnifying-glass"></i>SEARCH FOR-&gt;<span id="search_query"></span></h1>
+        <div class="container" id="result_container"></div>
+
+    </section>
+    <footer>
+        <a href="./">
+            <h5>GALLERY</h5>
+        </a>
+        <h1>|</h1>
+        <h5>Designed and Developed by Aniket</h5>
+        <h1>|</h1>
+        <a href="https://github.com/Aniketyadav05/PYTHON-PROJECTS">
+            <h5>GITHUB</h5>
+        </a>
+        <h1>|</h1>
+        <a href="https://www.linkedin.com/in/aniket-yadav-2162ab239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <h5>LINKEDIN</h5>
+        </a>
+
+    </footer>
+    <script src="./assests/common.js"></script>
+    <script src="./assests/search.js"></script>
+
+</body>
+
+</html>
